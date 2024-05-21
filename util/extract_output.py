@@ -36,5 +36,5 @@ def get_testrail_id_from_docstring(docstring):
         '''
     process_str = docstring.split('\n')
     for i, line in enumerate(process_str):
-        if line.strip().startswith('test case'):
+        if line.strip().startswith('test cases'):
             return line.strip().split(' ')[2:]

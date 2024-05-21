@@ -8,7 +8,7 @@ Resource          resource.robot
 *** Test Cases ***
 Valid Login With Resource
     [Documentation]    This test case demonstrates a valid login.
-    ...               test case T12 T10
+    ...               test cases T12 T10
     Open Browser To Login Page
     Input Username    demo
     Input Password    mode
