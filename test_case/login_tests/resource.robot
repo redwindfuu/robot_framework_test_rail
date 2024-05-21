@@ -24,7 +24,7 @@ ${CHROME_DRIVER}   /app/chromedriver
 Open Browser To Login Page
     
     
-    Open Browser    ${LOGIN URL}   ${BROWSER}   executable_path=${CHROME_DRIVER}  options=add_argument("--headless")
+    Open Browser    ${LOGIN URL}   ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
@@ -50,3 +50,7 @@ Submit Credentials
 Welcome Page Should Be Open
     Location Should Be    ${WELCOME URL}
     Title Should Be    Welcome Page
+
+Set TestRail Property
+    [Arguments]    ${key}    ${value}
+    Set Test Documentation    ${\n} - ${key}:  ${value} append=True

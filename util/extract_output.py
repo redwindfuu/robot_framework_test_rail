@@ -18,11 +18,23 @@ def processing_output(path_to_output):
         for test_case in test_cases:
             test_obj = {"test_suite": suite.attrib["name"], "name": test_case.get("name"),
                         "status": test_case.find("status").get("status")}
-            tags = test_case.findall("tag")
-            for tag in tags:
-                if tag.text.startswith("id="):
-                    test_obj["test_case_id"] = tag.text.split("=")[1]
+            docs = test_case.findall("doc")
+            list_testrail_id = []
+
+            for doc in docs:
+                list_testrail_id += get_testrail_id_from_docstring(doc.text)
+            test_obj["test_case_ids"] = list_testrail_id
             test_results.append(test_obj)
 
         result.append({"testcases": test_results, "suite_name": suite.attrib["name"]})
     return result
+
+def get_testrail_id_from_docstring(docstring):
+    input_str = '''
+            A DAG is a directed acyclic graph. It is a collection of all the tasks you want to run, organized in a way that reflects their relationships and dependencies. A DAG is defined in a Python script, which represents the DAGs structure (tasks and their dependencies) as code. The script is parsed by Airflow to generate the DAG object. The DAG object is then used by Airflow to schedule and execute the tasks.
+            test case T1223 T2345 T3456
+        '''
+    process_str = docstring.split('\n')
+    for i, line in enumerate(process_str):
+        if line.strip().startswith('test case'):
+            return line.strip().split(' ')[2:]

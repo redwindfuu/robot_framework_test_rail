@@ -9,19 +9,19 @@ def push_results_to_testrail(result):
     for item in result:
         suite = item['testcases']
         for case in suite:
-            case_id = case['test_case_id']
             status = case['status']
-            if case_id is not None:
-                if status == 'PASS':
-                    api.results.add_result_for_case(
-                        run_id=int(run_id),
-                        case_id=int(case_id),
-                        status_id=1,
-                    )
-                elif status == 'FAIL':
-                    api.results.add_result_for_case(
-                        run_id=int(run_id),
-                        case_id=int(case_id),
-                        status_id=5,
-                    )
+            for test_id in case['test_case_ids']:
+                if test_id is not None:
+                    id_number = test_id.split('T')[1]
+                    if status == 'PASS':
+                        api.results.add_result(
+                            test_id=int(id_number),
+                            status_id=1,
+                        )
+                    elif status == 'FAIL':
+                        api.results.add_result_for_case(
+                            test_id=int(id_number),
+                            status_id=5,
+                        )
         print("Pushed results to TestRail >>" + item['suite_name'])
+
