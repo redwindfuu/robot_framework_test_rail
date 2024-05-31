@@ -19,7 +19,7 @@ def push_results_to_testrail(result):
                             status_id=1,
                         )
                     elif status == 'FAIL':
-                        api.results.add_result_for_case(
+                        api.results.add_result(
                             test_id=int(id_number),
                             status_id=5,
                         )
