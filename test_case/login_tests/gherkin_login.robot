@@ -8,8 +8,8 @@ Test Teardown     Close Browser
 
 *** Test Cases ***
 Valid Login
-    [Tags]    id=2
-    ${id} =    Get Test Metadata    ID
+   [Documentation]    This test case demonstrates a valid login.
+    ...               test cases T3 T7
     Given browser is opened to login page
     When user "demo" logs in with password "mode"
     Then welcome page should be open
