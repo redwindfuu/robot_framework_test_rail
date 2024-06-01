@@ -1,839 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-05-21T14:45:08.060179" rpa="false"
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-05-31T09:50:28.989664" rpa="false"
        schemaversion="5">
-    <suite id="s1" name="Login Tests" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests">
-        <suite id="s1-s1" name="Gherkin Login"
-               source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\gherkin_login.robot">
-            <test id="s1-s1-t1" name="Valid Login" line="10">
-                <kw name="Get Test Metadata" owner="TestMetadata">
-                    <msg time="2024-05-21T14:45:08.279844" level="INFO">${id} = 2</msg>
-                    <var>${id}</var>
-                    <arg>ID</arg>
-                    <status status="PASS" start="2024-05-21T14:45:08.278709" elapsed="0.001135"/>
-                </kw>
-                <kw name="Given browser is opened to login page">
-                    <kw name="Open Browser To Login Page" owner="resource">
-                        <kw name="Open Browser" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:08.281395" level="INFO">Opening browser 'Chrome' to base url
-                                'http://localhost:7272/'.
-                            </msg>
-                            <arg>${LOGIN URL}</arg>
-                            <arg>${BROWSER}</arg>
-                            <doc>Opens a new browser instance to the optional ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:08.280362" elapsed="1.779586"/>
-                        </kw>
-                        <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-                            <doc>Maximizes current browser window.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:10.060953" elapsed="0.030507"/>
-                        </kw>
-                        <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-                            <arg>${DELAY}</arg>
-                            <doc>Sets the delay that is waited after each Selenium command.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:10.091460" elapsed="0.001008"/>
-                        </kw>
-                        <kw name="Login Page Should Be Open" owner="resource">
-                            <kw name="Title Should Be" owner="SeleniumLibrary">
-                                <msg time="2024-05-21T14:45:10.099949" level="INFO">Page title is 'Login Page'.</msg>
-                                <arg>Login Page</arg>
-                                <doc>Verifies that the current page title equals ``title``.</doc>
-                                <status status="PASS" start="2024-05-21T14:45:10.093505" elapsed="0.006444"/>
+    <suite id="s1" name="Tester" source="D:\Workspace\Phong\Ari\tester">
+        <suite id="s1-s1" name="Test Case" source="D:\Workspace\Phong\Ari\tester\test_case">
+            <suite id="s1-s1-s1" name="Login Tests" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests">
+                <suite id="s1-s1-s1-s1" name="Gherkin Login"
+                       source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\gherkin_login.robot">
+                    <test id="s1-s1-s1-s1-t1" name="Valid Login" line="10">
+                        <kw name="Given browser is opened to login page">
+                            <kw name="Open Browser To Login Page" owner="resource">
+                                <kw name="Open Browser" owner="SeleniumLibrary">
+                                    <msg time="2024-05-31T09:50:29.270817" level="INFO">Opening browser 'Chrome' to base
+                                        url 'http://localhost:7272/'.
+                                    </msg>
+                                    <msg time="2024-05-31T09:50:35.667633" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td
+                                        colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img
+                                        src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;
+                                    </msg>
+                                    <msg time="2024-05-31T09:50:35.667633" level="FAIL">WebDriverException: Message:
+                                        unknown error: net::ERR_CONNECTION_REFUSED
+                                        (Session info: chrome=125.0.6422.113)
+                                        Stacktrace:
+                                        GetHandleVerifier [0x00007FF7F68B1F52+60322]
+                                        (No symbol) [0x00007FF7F682CEC9]
+                                        (No symbol) [0x00007FF7F66E7EBA]
+                                        (No symbol) [0x00007FF7F66DFEA2]
+                                        (No symbol) [0x00007FF7F66D09C4]
+                                        (No symbol) [0x00007FF7F66D2212]
+                                        (No symbol) [0x00007FF7F66D0CF1]
+                                        (No symbol) [0x00007FF7F66D04D1]
+                                        (No symbol) [0x00007FF7F66D0410]
+                                        (No symbol) [0x00007FF7F66CE39D]
+                                        (No symbol) [0x00007FF7F66CE9DC]
+                                        (No symbol) [0x00007FF7F66EAC91]
+                                        (No symbol) [0x00007FF7F677C5FE]
+                                        (No symbol) [0x00007FF7F675C21A]
+                                        (No symbol) [0x00007FF7F677BC80]
+                                        (No symbol) [0x00007FF7F675BFC3]
+                                        (No symbol) [0x00007FF7F6729617]
+                                        (No symbol) [0x00007FF7F672A211]
+                                        GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
+                                        GetHandleVerifier [0x00007FF7F6C136D3+3605283]
+                                        GetHandleVerifier [0x00007FF7F6C09450+3563680]
+                                        GetHandleVerifier [0x00007FF7F6964326+790390]
+                                        (No symbol) [0x00007FF7F683750F]
+                                        (No symbol) [0x00007FF7F6833404]
+                                        (No symbol) [0x00007FF7F6833592]
+                                        (No symbol) [0x00007FF7F6822F9F]
+                                        BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+                                        RtlUserThreadStart [0x00007FF9BD60AA48+40]
+                                    </msg>
+                                    <arg>${LOGIN URL}</arg>
+                                    <arg>${BROWSER}</arg>
+                                    <doc>Opens a new browser instance to the optional ``url``.</doc>
+                                    <status status="FAIL" start="2024-05-31T09:50:29.270817" elapsed="6.398324">
+                                        WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+                                        (Session info: chrome=125.0.6422.113)
+                                        Stacktrace:
+                                        GetHandleVerifier [0x00007FF7F68B1F52+60322]
+                                        (No symbol) [0x00007FF7F682CEC9]
+                                        (No symbol) [0x00007FF7F66E7EBA]
+                                        (No symbol) [0x00007FF7F66DFEA2]
+                                        (No symbol) [0x00007FF7F66D09C4]
+                                        (No symbol) [0x00007FF7F66D2212]
+                                        (No symbol) [0x00007FF7F66D0CF1]
+                                        (No symbol) [0x00007FF7F66D04D1]
+                                        (No symbol) [0x00007FF7F66D0410]
+                                        (No symbol) [0x00007FF7F66CE39D]
+                                        (No symbol) [0x00007FF7F66CE9DC]
+                                        (No symbol) [0x00007FF7F66EAC91]
+                                        (No symbol) [0x00007FF7F677C5FE]
+                                        (No symbol) [0x00007FF7F675C21A]
+                                        (No symbol) [0x00007FF7F677BC80]
+                                        (No symbol) [0x00007FF7F675BFC3]
+                                        (No symbol) [0x00007FF7F6729617]
+                                        (No symbol) [0x00007FF7F672A211]
+                                        GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
+                                        GetHandleVerifier [0x00007FF7F6C136D3+3605283]
+                                        GetHandleVerifier [0x00007FF7F6C09450+3563680]
+                                        GetHandleVerifier [0x00007FF7F6964326+790390]
+                                        (No symbol) [0x00007FF7F683750F]
+                                        (No symbol) [0x00007FF7F6833404]
+                                        (No symbol) [0x00007FF7F6833592]
+                                        (No symbol) [0x00007FF7F6822F9F]
+                                        BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+                                        RtlUserThreadStart [0x00007FF9BD60AA48+40]
+                                    </status>
+                                </kw>
+                                <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+                                    <doc>Maximizes current browser window.</doc>
+                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670458" elapsed="0.000000"/>
+                                </kw>
+                                <kw name="Set Selenium Speed" owner="SeleniumLibrary">
+                                    <arg>${DELAY}</arg>
+                                    <doc>Sets the delay that is waited after each Selenium command.</doc>
+                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670969" elapsed="0.000000"/>
+                                </kw>
+                                <kw name="Login Page Should Be Open" owner="resource">
+                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670969" elapsed="0.000000"/>
+                                </kw>
+                                <status status="FAIL" start="2024-05-31T09:50:29.270817" elapsed="6.400152">
+                                    WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+                                    (Session info: chrome=125.0.6422.113)
+                                    Stacktrace:
+                                    GetHandleVerifier [0x00007FF7F68B1F52+60322]
+                                    (No symbol) [0x00007FF7F682CEC9]
+                                    (No symbol) [0x00007FF7F66E7EBA]
+                                    (No symbol) [0x00007FF7F66DFEA2]
+                                    (No symbol) [0x00007FF7F66D09C4]
+                                    (No symbol) [0x00007FF7F66D2212]
+                                    (No symbol) [0x00007FF7F66D0CF1]
+                                    (No symbol) [0x00007FF7F66D04D1]
+                                    (No symbol) [0x00007FF7F66D0410]
+                                    (No symbol) [0x00007FF7F66CE39D]
+                                    (No symbol) [0x00007FF7F66CE9DC]
+                                    (No symbol) [0x00007FF7F66EAC91]
+                                    (No symbol) [0x00007FF7F677C5FE]
+                                    (No symbol) [0x00007FF7F675C21A]
+                                    (No symbol) [0x00007FF7F677BC80]
+                                    (No symbol) [0x00007FF7F675BFC3]
+                                    (No symbol) [0x00007FF7F6729617]
+                                    (No symbol) [0x00007FF7F672A211]
+                                    GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
+                                    GetHandleVerifier [0x00007FF7F6C136D3+3605283]
+                                    GetHandleVerifier [0x00007FF7F6C09450+3563680]
+                                    GetHandleVerifier [0x00007FF7F6964326+790390]
+                                    (No symbol) [0x00007FF7F683750F]
+                                    (No symbol) [0x00007FF7F6833404]
+                                    (No symbol) [0x00007FF7F6833592]
+                                    (No symbol) [0x00007FF7F6822F9F]
+                                    BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+                                    RtlUserThreadStart [0x00007FF9BD60AA48+40]
+                                </status>
                             </kw>
-                            <status status="PASS" start="2024-05-21T14:45:10.092468" elapsed="0.007481"/>
+                            <status status="FAIL" start="2024-05-31T09:50:29.269817" elapsed="6.401152">
+                                WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+                                (Session info: chrome=125.0.6422.113)
+                                Stacktrace:
+                                GetHandleVerifier [0x00007FF7F68B1F52+60322]
+                                (No symbol) [0x00007FF7F682CEC9]
+                                (No symbol) [0x00007FF7F66E7EBA]
+                                (No symbol) [0x00007FF7F66DFEA2]
+                                (No symbol) [0x00007FF7F66D09C4]
+                                (No symbol) [0x00007FF7F66D2212]
+                                (No symbol) [0x00007FF7F66D0CF1]
+                                (No symbol) [0x00007FF7F66D04D1]
+                                (No symbol) [0x00007FF7F66D0410]
+                                (No symbol) [0x00007FF7F66CE39D]
+                                (No symbol) [0x00007FF7F66CE9DC]
+                                (No symbol) [0x00007FF7F66EAC91]
+                                (No symbol) [0x00007FF7F677C5FE]
+                                (No symbol) [0x00007FF7F675C21A]
+                                (No symbol) [0x00007FF7F677BC80]
+                                (No symbol) [0x00007FF7F675BFC3]
+                                (No symbol) [0x00007FF7F6729617]
+                                (No symbol) [0x00007FF7F672A211]
+                                GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
+                                GetHandleVerifier [0x00007FF7F6C136D3+3605283]
+                                GetHandleVerifier [0x00007FF7F6C09450+3563680]
+                                GetHandleVerifier [0x00007FF7F6964326+790390]
+                                (No symbol) [0x00007FF7F683750F]
+                                (No symbol) [0x00007FF7F6833404]
+                                (No symbol) [0x00007FF7F6833592]
+                                (No symbol) [0x00007FF7F6822F9F]
+                                BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+                                RtlUserThreadStart [0x00007FF9BD60AA48+40]
+                            </status>
                         </kw>
-                        <status status="PASS" start="2024-05-21T14:45:08.280362" elapsed="1.819587"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:08.280362" elapsed="1.819587"/>
-                </kw>
-                <kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;"
-                    source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:10.102399" level="INFO">Typing text 'demo' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:10.102399" elapsed="0.178222"/>
+                        <kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;"
+                            source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+                            <status status="NOT RUN" start="2024-05-31T09:50:35.671979" elapsed="0.001005"/>
                         </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:10.102399" elapsed="0.178222"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:10.281646" level="INFO">Typing text 'mode' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:10.281646" elapsed="0.100913"/>
+                        <kw name="Then welcome page should be open" owner="resource">
+                            <status status="NOT RUN" start="2024-05-31T09:50:35.673494" elapsed="0.000000"/>
                         </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:10.281646" elapsed="0.100913"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:10.383728" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:10.383728" elapsed="0.387191"/>
+                        <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+                            <doc>Closes the current browser.</doc>
+                            <status status="PASS" start="2024-05-31T09:50:35.673494" elapsed="2.166027"/>
                         </kw>
-                        <status status="PASS" start="2024-05-21T14:45:10.383728" elapsed="0.388183"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:10.101214" elapsed="0.670697"/>
-                </kw>
-                <kw name="Then welcome page should be open" owner="resource">
-                    <kw name="Location Should Be" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:10.778548" level="INFO">Current location is
-                            'http://localhost:7272/welcome.html'.
-                        </msg>
-                        <arg>${WELCOME URL}</arg>
-                        <doc>Verifies that the current URL is exactly ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:10.771911" elapsed="0.007634"/>
-                    </kw>
-                    <kw name="Title Should Be" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:10.786809" level="INFO">Page title is 'Welcome Page'.</msg>
-                        <arg>Welcome Page</arg>
-                        <doc>Verifies that the current page title equals ``title``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:10.779545" elapsed="0.007264"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:10.771911" elapsed="0.014898"/>
-                </kw>
-                <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-                    <doc>Closes the current browser.</doc>
-                    <status status="PASS" start="2024-05-21T14:45:10.787818" elapsed="2.172629"/>
-                </kw>
-                <tag>id=2</tag>
-                <status status="PASS" start="2024-05-21T14:45:08.277708" elapsed="4.682739"/>
-            </test>
-            <doc>A test suite with a single Gherkin style test.
+                        <doc>This test case demonstrates a valid login.
+                            test cases T3 T7
+                        </doc>
+                        <status status="FAIL" start="2024-05-31T09:50:29.268808" elapsed="8.571684">WebDriverException:
+                            Message: unknown error: net::ERR_CONNECTION_REFUSED
+                            (Session info: chrome=125.0.6422.113)
+                            Stacktrace:
+                            GetHandleVerifier [0x00007FF7F68B1F52+60322]
+                            (No symbol) [0x00007FF7F682CEC9]
+                            (No symbol) [0x00007FF7F66E7EBA]
+                            (No symbol) [0x00007FF7F66DFEA2]
+                            (No symbol) [0x00007FF7F66D09C4]
+                            (No symbol) [0x00007FF7F66D2212]
+                            (No symbol) [0x00007FF7F66D0CF1]
+                            (No symbol) [0x00007FF7F66D04D1]
+                            (No symbol) [0x00007FF7F66D0410]
+                            (No symbol) [0x00007FF7F66CE39D]
+                            (No symbol) [0x00007FF7F66CE9DC]
+                            (No symbol) [0x00007FF7F66EAC91]
+                            (No symbol) [0x00007FF7F677C5FE]
+                            (No symbol) [0x00007FF7F675C21A]
+                            (No symbol) [0x00007FF7F677BC80]
+                            (No symbol) [0x00007FF7F675BFC3]
+                            (No symbol) [0x00007FF7F6729617]
+                            (No symbol) [0x00007FF7F672A211]
+                            GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
+                            GetHandleVerifier [0x00007FF7F6C136D3+3605283]
+                            GetHandleVerifier [0x00007FF7F6C09450+3563680]
+                            GetHandleVerifier [0x00007FF7F6964326+790390]
+                            (No symbol) [0x00007FF7F683750F]
+                            (No symbol) [0x00007FF7F6833404]
+                            (No symbol) [0x00007FF7F6833592]
+                            (No symbol) [0x00007FF7F6822F9F]
+                            BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+                            RtlUserThreadStart [0x00007FF9BD60AA48+40]
+                        </status>
+                    </test>
+                    <doc>A test suite with a single Gherkin style test.
 
-                This test is functionally identical to the example in
-                valid_login.robot file.
-            </doc>
-            <status status="PASS" start="2024-05-21T14:45:08.083829" elapsed="4.878659"/>
+                        This test is functionally identical to the example in
+                        valid_login.robot file.
+                    </doc>
+                    <status status="FAIL" start="2024-05-31T09:50:29.033774" elapsed="8.809220"/>
+                </suite>
+                <status status="FAIL" start="2024-05-31T09:50:29.026079" elapsed="8.819454"/>
+            </suite>
+            <status status="FAIL" start="2024-05-31T09:50:29.020805" elapsed="8.826830"/>
         </suite>
-        <suite id="s1-s2" name="Invalid Login"
-               source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\invalid_login.robot">
-            <kw name="Open Browser To Login Page" owner="resource" type="SETUP">
-                <kw name="Open Browser" owner="SeleniumLibrary">
-                    <msg time="2024-05-21T14:45:12.969561" level="INFO">Opening browser 'Chrome' to base url
-                        'http://localhost:7272/'.
-                    </msg>
-                    <arg>${LOGIN URL}</arg>
-                    <arg>${BROWSER}</arg>
-                    <doc>Opens a new browser instance to the optional ``url``.</doc>
-                    <status status="PASS" start="2024-05-21T14:45:12.969561" elapsed="1.732051"/>
-                </kw>
-                <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-                    <doc>Maximizes current browser window.</doc>
-                    <status status="PASS" start="2024-05-21T14:45:14.701612" elapsed="0.040849"/>
-                </kw>
-                <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-                    <arg>${DELAY}</arg>
-                    <doc>Sets the delay that is waited after each Selenium command.</doc>
-                    <status status="PASS" start="2024-05-21T14:45:14.742461" elapsed="0.000000"/>
-                </kw>
-                <kw name="Login Page Should Be Open" owner="resource">
-                    <kw name="Title Should Be" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:14.750459" level="INFO">Page title is 'Login Page'.</msg>
-                        <arg>Login Page</arg>
-                        <doc>Verifies that the current page title equals ``title``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:14.743820" elapsed="0.006639"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:14.742461" elapsed="0.009012"/>
-                </kw>
-                <status status="PASS" start="2024-05-21T14:45:12.969561" elapsed="1.781912"/>
-            </kw>
-            <test id="s1-s2-t1" name="Invalid Username" line="17">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:14.752471" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:14.752471" elapsed="0.014010"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:14.771484" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:14.766481" elapsed="0.005003"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:14.766481" elapsed="0.005003"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:14.751473" elapsed="0.020011"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:14.772479" level="INFO">Set tag 'id=7'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:14.772479" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:14.773477" level="INFO">${id} = 7</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:14.773477" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:14.773477" level="INFO">Typing text 'invalid' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:14.773477" elapsed="0.148002"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:14.773477" elapsed="0.148002"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:14.921479" level="INFO">Typing text 'mode' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:14.921479" elapsed="0.103773"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:14.921479" elapsed="0.103773"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.025252" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.025252" elapsed="0.085663"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.025252" elapsed="0.085663"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.116671" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.112192" elapsed="0.004479"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.124028" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.117775" elapsed="0.006253"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.112192" elapsed="0.011836"/>
-                    </kw>
-                    <arg>invalid</arg>
-                    <arg>${VALID PASSWORD}</arg>
-                    <arg>7</arg>
-                    <status status="PASS" start="2024-05-21T14:45:14.772479" elapsed="0.351549"/>
-                </kw>
-                <tag>id=7</tag>
-                <status status="PASS" start="2024-05-21T14:45:14.751473" elapsed="0.372555"/>
-            </test>
-            <test id="s1-s2-t2" name="Invalid Password" line="18">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:15.126469" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.126469" elapsed="0.025267"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.158350" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.151736" elapsed="0.006614"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.151736" elapsed="0.006614"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:15.125049" elapsed="0.033301"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:15.159358" level="INFO">Set tag 'id=6'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.159358" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:15.159358" level="INFO">${id} = 6</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.159358" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.160368" level="INFO">Typing text 'demo' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.159358" elapsed="0.103565"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.159358" elapsed="0.103565"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.262923" level="INFO">Typing text 'invalid' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.262923" elapsed="0.101218"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.262923" elapsed="0.101218"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.365264" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.364141" elapsed="0.079159"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.364141" elapsed="0.080479"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.449647" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.444620" elapsed="0.005027"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.456268" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.450746" elapsed="0.005522"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.444620" elapsed="0.011648"/>
-                    </kw>
-                    <arg>${VALID USER}</arg>
-                    <arg>invalid</arg>
-                    <arg>6</arg>
-                    <status status="PASS" start="2024-05-21T14:45:15.158350" elapsed="0.297918"/>
-                </kw>
-                <tag>id=6</tag>
-                <status status="PASS" start="2024-05-21T14:45:15.125049" elapsed="0.332222"/>
-            </test>
-            <test id="s1-s2-t3" name="Invalid Username And Password" line="19">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:15.458586" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.458586" elapsed="0.024173"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.490630" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.483776" elapsed="0.006854"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.482759" elapsed="0.007871"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:15.458586" elapsed="0.032044"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:15.490630" level="INFO">Set tag 'id=5'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.490630" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:15.492068" level="INFO">${id} = 5</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.492068" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.492576" level="INFO">Typing text 'invalid' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.492576" elapsed="0.118629"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.492068" elapsed="0.119137"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.611205" level="INFO">Typing text 'whatever' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.611205" elapsed="0.108673"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.611205" elapsed="0.108673"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.719878" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.719878" elapsed="0.073060"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.719878" elapsed="0.073060"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.800133" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.793942" elapsed="0.006191"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.806274" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.800133" elapsed="0.006141"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.793942" elapsed="0.012332"/>
-                    </kw>
-                    <arg>invalid</arg>
-                    <arg>whatever</arg>
-                    <arg>5</arg>
-                    <status status="PASS" start="2024-05-21T14:45:15.490630" elapsed="0.315644"/>
-                </kw>
-                <tag>id=5</tag>
-                <status status="PASS" start="2024-05-21T14:45:15.457271" elapsed="0.350011"/>
-            </test>
-            <test id="s1-s2-t4" name="Empty Username" line="20">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:15.808295" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.808295" elapsed="0.023615"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.838775" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.832903" elapsed="0.006896"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:15.831910" elapsed="0.007889"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:15.808295" elapsed="0.031504"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:15.840785" level="INFO">Set tag 'id=8'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:15.840785" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:15.840785" level="INFO">${id} = 8</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.840785" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.841786" level="INFO">Typing text '' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.841786" elapsed="0.080250"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.840785" elapsed="0.081251"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:15.923058" level="INFO">Typing text 'mode' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:15.922036" elapsed="0.095897"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:15.922036" elapsed="0.095897"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.017933" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.017933" elapsed="0.076119"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.017933" elapsed="0.076119"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.101644" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.094052" elapsed="0.007592"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.107976" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.101644" elapsed="0.006332"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.094052" elapsed="0.013924"/>
-                    </kw>
-                    <arg>${EMPTY}</arg>
-                    <arg>${VALID PASSWORD}</arg>
-                    <arg>8</arg>
-                    <status status="PASS" start="2024-05-21T14:45:15.839799" elapsed="0.268177"/>
-                </kw>
-                <tag>id=8</tag>
-                <status status="PASS" start="2024-05-21T14:45:15.807282" elapsed="0.301710"/>
-            </test>
-            <test id="s1-s2-t5" name="Empty Password" line="21">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:16.111341" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:16.111341" elapsed="0.023352"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.198903" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.135690" elapsed="0.063213"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.134693" elapsed="0.064210"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:16.109996" elapsed="0.090349"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:16.201921" level="INFO">Set tag 'id=4'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:16.201379" elapsed="0.000542"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:16.201921" level="INFO">${id} = 4</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.201921" elapsed="0.000532"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.202453" level="INFO">Typing text 'demo' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.202453" elapsed="0.104784"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.202453" elapsed="0.105791"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.308244" level="INFO">Typing text '' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.308244" elapsed="0.089960"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.308244" elapsed="0.089960"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.399234" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.399234" elapsed="0.073378"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.399234" elapsed="0.074387"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.482142" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.473621" elapsed="0.008521"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.488936" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.482142" elapsed="0.006794"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.473621" elapsed="0.015315"/>
-                    </kw>
-                    <arg>${VALID USER}</arg>
-                    <arg>${EMPTY}</arg>
-                    <arg>4</arg>
-                    <status status="PASS" start="2024-05-21T14:45:16.200345" elapsed="0.288591"/>
-                </kw>
-                <tag>id=4</tag>
-                <status status="PASS" start="2024-05-21T14:45:16.108992" elapsed="0.380941"/>
-            </test>
-            <test id="s1-s2-t6" name="Empty Username And Password" line="22">
-                <kw name="Go To Login Page" owner="resource" type="SETUP">
-                    <kw name="Go To" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:16.491951" level="INFO">Opening url 'http://localhost:7272/'</msg>
-                        <arg>${LOGIN URL}</arg>
-                        <doc>Navigates the current browser window to the provided ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:16.491951" elapsed="0.024827"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.526647" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.517781" elapsed="0.008866"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.516778" elapsed="0.009869"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:16.490930" elapsed="0.035717"/>
-                </kw>
-                <kw name="Login With Invalid Credentials Should Fail">
-                    <kw name="Set Tags" owner="BuiltIn">
-                        <msg time="2024-05-21T14:45:16.528655" level="INFO">Set tag 'id=9'.</msg>
-                        <arg>id=${ID}</arg>
-                        <doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:16.528655" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Get Test Metadata" owner="TestMetadata">
-                        <msg time="2024-05-21T14:45:16.528655" level="INFO">${id} = 9</msg>
-                        <var>${id}</var>
-                        <arg>ID</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.528655" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Input Username" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.528655" level="INFO">Typing text '' into text field
-                                'username_field'.
-                            </msg>
-                            <arg>username_field</arg>
-                            <arg>${username}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.528655" elapsed="0.091360"/>
-                        </kw>
-                        <arg>${username}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.528655" elapsed="0.091360"/>
-                    </kw>
-                    <kw name="Input Password" owner="resource">
-                        <kw name="Input Text" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.621025" level="INFO">Typing text '' into text field
-                                'password_field'.
-                            </msg>
-                            <arg>password_field</arg>
-                            <arg>${password}</arg>
-                            <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.621025" elapsed="0.085244"/>
-                        </kw>
-                        <arg>${password}</arg>
-                        <status status="PASS" start="2024-05-21T14:45:16.621025" elapsed="0.085244"/>
-                    </kw>
-                    <kw name="Submit Credentials" owner="resource">
-                        <kw name="Click Button" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.707276" level="INFO">Clicking button 'login_button'.</msg>
-                            <arg>login_button</arg>
-                            <doc>Clicks the button identified by ``locator``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.707276" elapsed="0.070718"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.707276" elapsed="0.070718"/>
-                    </kw>
-                    <kw name="Login Should Have Failed">
-                        <kw name="Location Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.784448" level="INFO">Current location is
-                                'http://localhost:7272/error.html'.
-                            </msg>
-                            <arg>${ERROR URL}</arg>
-                            <doc>Verifies that the current URL is exactly ``url``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.777994" elapsed="0.006454"/>
-                        </kw>
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:16.790611" level="INFO">Page title is 'Error Page'.</msg>
-                            <arg>Error Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:16.784448" elapsed="0.006163"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:16.777994" elapsed="0.012617"/>
-                    </kw>
-                    <arg>${EMPTY}</arg>
-                    <arg>${EMPTY}</arg>
-                    <arg>9</arg>
-                    <status status="PASS" start="2024-05-21T14:45:16.527656" elapsed="0.262955"/>
-                </kw>
-                <tag>id=9</tag>
-                <status status="PASS" start="2024-05-21T14:45:16.490930" elapsed="0.300678"/>
-            </test>
-            <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-                <doc>Closes the current browser.</doc>
-                <status status="PASS" start="2024-05-21T14:45:16.792620" elapsed="2.187567"/>
-            </kw>
-            <doc>A test suite containing tests related to invalid login.
-
-                These tests are data-driven by their nature. They use a single
-                keyword, specified with Test Template setting, that is called
-                with different arguments to cover different scenarios.
-
-                This suite also demonstrates using setups and teardowns in
-                different levels.
-            </doc>
-            <status status="PASS" start="2024-05-21T14:45:12.963498" elapsed="6.016689"/>
-        </suite>
-        <suite id="s1-s3" name="Valid Login"A
-               source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\valid_login.robot">
-            <test id="s1-s3-t1" name="Valid Login With Resource" line="9">
-                <kw name="Open Browser To Login Page" owner="resource">
-                    <kw name="Open Browser" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:18.986923" level="INFO">Opening browser 'Chrome' to base url
-                            'http://localhost:7272/'.
-                        </msg>
-                        <arg>${LOGIN URL}</arg>
-                        <arg>${BROWSER}</arg>
-                        <doc>Opens a new browser instance to the optional ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:18.985877" elapsed="1.703018"/>
-                    </kw>
-                    <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-                        <doc>Maximizes current browser window.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:20.690203" elapsed="0.038191"/>
-                    </kw>
-                    <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-                        <arg>${DELAY}</arg>
-                        <doc>Sets the delay that is waited after each Selenium command.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:20.728394" elapsed="0.000000"/>
-                    </kw>
-                    <kw name="Login Page Should Be Open" owner="resource">
-                        <kw name="Title Should Be" owner="SeleniumLibrary">
-                            <msg time="2024-05-21T14:45:20.735413" level="INFO">Page title is 'Login Page'.</msg>
-                            <arg>Login Page</arg>
-                            <doc>Verifies that the current page title equals ``title``.</doc>
-                            <status status="PASS" start="2024-05-21T14:45:20.729416" elapsed="0.005997"/>
-                        </kw>
-                        <status status="PASS" start="2024-05-21T14:45:20.729416" elapsed="0.005997"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:18.985877" elapsed="1.749536"/>
-                </kw>
-                <kw name="Input Username" owner="resource">
-                    <kw name="Input Text" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:20.736409" level="INFO">Typing text 'demo' into text field
-                            'username_field'.
-                        </msg>
-                        <arg>username_field</arg>
-                        <arg>${username}</arg>
-                        <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:20.736409" elapsed="0.125456"/>
-                    </kw>
-                    <arg>demo</arg>
-                    <status status="PASS" start="2024-05-21T14:45:20.736409" elapsed="0.125456"/>
-                </kw>
-                <kw name="Input Password" owner="resource">
-                    <kw name="Input Text" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:20.862866" level="INFO">Typing text 'mode' into text field
-                            'password_field'.
-                        </msg>
-                        <arg>password_field</arg>
-                        <arg>${password}</arg>
-                        <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:20.862866" elapsed="0.101927"/>
-                    </kw>
-                    <arg>mode</arg>
-                    <status status="PASS" start="2024-05-21T14:45:20.862866" elapsed="0.101927"/>
-                </kw>
-                <kw name="Submit Credentials" owner="resource">
-                    <kw name="Click Button" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:20.965803" level="INFO">Clicking button 'login_button'.</msg>
-                        <arg>login_button</arg>
-                        <doc>Clicks the button identified by ``locator``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:20.965803" elapsed="0.387726"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:20.965803" elapsed="0.387726"/>
-                </kw>
-                <kw name="Welcome Page Should Be Open" owner="resource">
-                    <kw name="Location Should Be" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:21.360857" level="INFO">Current location is
-                            'http://localhost:7272/welcome.html'.
-                        </msg>
-                        <arg>${WELCOME URL}</arg>
-                        <doc>Verifies that the current URL is exactly ``url``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:21.354597" elapsed="0.006260"/>
-                    </kw>
-                    <kw name="Title Should Be" owner="SeleniumLibrary">
-                        <msg time="2024-05-21T14:45:21.370880" level="INFO">Page title is 'Welcome Page'.</msg>
-                        <arg>Welcome Page</arg>
-                        <doc>Verifies that the current page title equals ``title``.</doc>
-                        <status status="PASS" start="2024-05-21T14:45:21.360857" elapsed="0.011016"/>
-                    </kw>
-                    <status status="PASS" start="2024-05-21T14:45:21.354597" elapsed="0.017276"/>
-                </kw>
-                <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-                    <doc>Closes the current browser.</doc>
-                    <status status="PASS" start="2024-05-21T14:45:21.371873" elapsed="2.163816"/>
-                </kw>
-                <doc>This test case demonstrates a valid login.
-                    test cases T12 T10
-                </doc>
-                <status status="PASS" start="2024-05-21T14:45:18.985877" elapsed="4.549812"/>
-            </test>
-            <doc>A test suite with a single test for valid login.
-
-                This test has a workflow that is created using keywords in
-                the imported resource file.
-            </doc>
-            <status status="PASS" start="2024-05-21T14:45:18.981222" elapsed="4.555480"/>
-        </suite>
-        <status status="PASS" start="2024-05-21T14:45:08.061161" elapsed="15.477554"/>
+        <status status="FAIL" start="2024-05-31T09:50:28.992497" elapsed="8.857148"/>
     </suite>
     <statistics>
         <total>
-            <stat pass="8" fail="0" skip="0">All Tests</stat>
+            <stat pass="0" fail="1" skip="0">All Tests</stat>
         </total>
         <tag>
-            <stat pass="1" fail="0" skip="0">id=2</stat>
-            <stat pass="1" fail="0" skip="0">id=4</stat>
-            <stat pass="1" fail="0" skip="0">id=5</stat>
-            <stat pass="1" fail="0" skip="0">id=6</stat>
-            <stat pass="1" fail="0" skip="0">id=7</stat>
-            <stat pass="1" fail="0" skip="0">id=8</stat>
-            <stat pass="1" fail="0" skip="0">id=9</stat>
         </tag>
         <suite>
-            <stat pass="8" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
-            <stat pass="1" fail="0" skip="0" id="s1-s1" name="Gherkin Login">Login Tests.Gherkin Login</stat>
-            <stat pass="6" fail="0" skip="0" id="s1-s2" name="Invalid Login">Login Tests.Invalid Login</stat>
-            <stat pass="1" fail="0" skip="0" id="s1-s3" name="Valid Login">Login Tests.Valid Login</stat>
+            <stat pass="0" fail="1" skip="0" id="s1" name="Tester">Tester</stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Case">Tester.Test Case</stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login Tests">Tester.Test Case.Login Tests</stat>
+            <stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Gherkin Login">Tester.Test Case.Login Tests.Gherkin
+                Login
+            </stat>
         </suite>
     </statistics>
     <errors>

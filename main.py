@@ -23,7 +23,7 @@ if __name__ == "__main__":
             ...
         ]
     '''
-    result = processing_output("results/output.xml")
+    result = processing_output("output.xml")
     print(result)
     push_results_to_testrail(result)
     print(result)

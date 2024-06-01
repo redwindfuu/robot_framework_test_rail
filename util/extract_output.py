@@ -19,7 +19,10 @@ def processing_output(path_to_output):
             test_obj = {"test_suite": suite.attrib["name"], "name": test_case.get("name"),
                         "status": test_case.find("status").get("status")}
             docs = test_case.findall("doc")
+            if test_obj["status"] == "FAIL":
+                test_obj["error_message"] = test_case.find("status").text
             list_testrail_id = []
+
 
             for doc in docs:
                 list_testrail_id += get_testrail_id_from_docstring(doc.text)

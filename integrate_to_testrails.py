@@ -13,15 +13,21 @@ def push_results_to_testrail(result):
             for test_id in case['test_case_ids']:
                 if test_id is not None:
                     id_number = test_id.split('T')[1]
-                    if status == 'PASS':
-                        api.results.add_result(
-                            test_id=int(id_number),
-                            status_id=1,
-                        )
-                    elif status == 'FAIL':
-                        api.results.add_result(
-                            test_id=int(id_number),
-                            status_id=5,
-                        )
+                    try:
+                        if status == 'PASS':
+                            api.results.add_result(
+                                test_id=int(id_number),
+                                status_id=1,
+                            )
+                        elif status == 'FAIL':
+                            print(case['error_message'])
+                            api.results.add_result(
+                                test_id=int(id_number),
+                                status_id=5,
+                                comment=case['error_message']
+                            )
+                    except Exception as e:
+                        print('Error: ', e)
+                        print('Test case ID: ', test_id)
         print("Pushed results to TestRail >>" + item['suite_name'])
 
