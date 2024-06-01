@@ -27,14 +27,14 @@ except ImportError:
 
 
 ROOT = join(dirname(abspath(__file__)), 'html')
-PORT = 7272
+PORT = 8000
 
 
 class DemoServer(ThreadingMixIn, HTTPServer):
     allow_reuse_address = True
 
     def __init__(self, port=PORT):
-        HTTPServer.__init__(self, ('localhost', int(port)),
+        HTTPServer.__init__(self, ("192.168.1.8", int(port)),
                             SimpleHTTPRequestHandler)
 
     def serve(self, directory=ROOT):

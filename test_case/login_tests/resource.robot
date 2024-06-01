@@ -9,8 +9,8 @@ Library           TestMetadata.py
 
 
 *** Variables ***
-${SERVER}         localhost:7272
-${BROWSER}        Firefox
+${SERVER}         192.168.1.8:8000
+${BROWSER}        Headless Firefox
 ${DELAY}          0
 ${VALID USER}     demo
 ${VALID PASSWORD}    mode
@@ -23,7 +23,7 @@ ${FIREFOX DRIVER}    /app/geckodriver
 *** Keywords ***
 Open Browser To Login Page
 
-    Open Browser    ${LOGIN URL}   ${BROWSER}   executable_path=${FIREFOX DRIVER}  options=add_argument("--headless --no-sandbox --disable-dev-shm-usage --allow-downgrade")
+    Open Browser    ${LOGIN URL}   ${BROWSER}  options=add_argument("--headless");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage");add_argument("--allow-downgrade")
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open

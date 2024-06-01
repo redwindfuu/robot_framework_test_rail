@@ -1,854 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.9.19 on darwin)" generated="20240531 06:26:00.360" rpa="false" schemaversion="3">
-<suite id="s1" name="Sportsbook-Automation" source="/Users/jamine/autofw/sportsbook-automation">
-<suite id="s1-s1" name="Src" source="/Users/jamine/autofw/sportsbook-automation/src">
-<suite id="s1-s1-s1" name="Sb2" source="/Users/jamine/autofw/sportsbook-automation/src/sb2">
-<suite id="s1-s1-s1-s1" name="Tests" source="/Users/jamine/autofw/sportsbook-automation/src/sb2/tests">
-<suite id="s1-s1-s1-s1-s1" name="SB2 Tests" source="/Users/jamine/autofw/sportsbook-automation/src/sb2/tests/SB2_Tests">
-<suite id="s1-s1-s1-s1-s1-s1" name="03 BOAdminTests" source="/Users/jamine/autofw/sportsbook-automation/src/sb2/tests/SB2_Tests/03_BOAdminTests">
-<suite id="s1-s1-s1-s1-s1-s1-s1" name="BOConfigurationsTests" source="/Users/jamine/autofw/sportsbook-automation/src/sb2/tests/SB2_Tests/03_BOAdminTests/BOConfigurationsTests">
-<suite id="s1-s1-s1-s1-s1-s1-s1-s1" name="AdminConfTest" source="/Users/jamine/autofw/sportsbook-automation/src/sb2/tests/SB2_Tests/03_BOAdminTests/BOConfigurationsTests/AdminConfTest.robot">
-<kw name="common.Create chrome option" library="common" type="SETUP">
-<kw name="Set Driver Path For Browser" library="DriverManager">
-<status status="PASS" starttime="20240531 06:26:01.671" endtime="20240531 06:26:01.671"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${chrome_options}</var>
-<arg>selenium.webdriver.chrome.options.Options()</arg>
-<arg>selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240531 06:26:01.672" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x126a66430&gt;</msg>
-<status status="PASS" starttime="20240531 06:26:01.671" endtime="20240531 06:26:01.672"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${chrome options}</arg>
-<arg>add_argument</arg>
-<arg>--no-sandbox</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 06:26:01.672" endtime="20240531 06:26:01.672"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${chrome options}</arg>
-<arg>add_argument</arg>
-<arg>disable-gpu</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 06:26:01.672" endtime="20240531 06:26:01.673"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${chrome options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-extension</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 06:26:01.673" endtime="20240531 06:26:01.673"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${chrome options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-notifications</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 06:26:01.673" endtime="20240531 06:26:01.673"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${chrome options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-dev-shm-usage</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240531 06:26:01.674" endtime="20240531 06:26:01.674"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>browser=chrome</arg>
-<arg>options=${chrome_options}</arg>
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-06-01T19:45:37.385618" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests">
+<suite id="s1-s1" name="Gherkin Login" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\gherkin_login.robot">
+<test id="s1-s1-t1" name="Valid Login" line="10">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:45:37.569798" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:7272/'.</msg>
+<msg time="2024-06-01T19:45:37.575363" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-01T19:45:37.575363" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${FIREFOX DRIVER}</arg>
+<arg>options=add_argument("--headless --no-sandbox --disable-dev-shm-usage --allow-downgrade")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240531 06:26:01.674" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20240531 06:26:01.674" endtime="20240531 06:26:12.017"/>
+<status status="FAIL" start="2024-06-01T19:45:37.569262" elapsed="0.007670">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
-<kw name="Set Window Size" library="SeleniumLibrary">
-<arg>1920</arg>
-<arg>1080</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20240531 06:26:12.020" endtime="20240531 06:26:12.360"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.576932" elapsed="0.000000"/>
 </kw>
-<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
-<arg>NONE</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<msg timestamp="20240531 06:26:12.363" level="INFO">No keyword will be run on failure.</msg>
-<status status="PASS" starttime="20240531 06:26:12.361" endtime="20240531 06:26:12.364"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.577936" elapsed="0.000000"/>
 </kw>
-<status status="PASS" starttime="20240531 06:26:01.670" endtime="20240531 06:26:12.364"/>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.577936" elapsed="0.000000"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-s1-s1-s1-t1" name="As a user I want to check Risk in Admin Rights" line="141">
-<kw name="common.Open SB2 BO site" library="common" type="SETUP">
-<kw name="Set Global Variable" library="BuiltIn">
-<arg>${_detail_request}</arg>
-<arg>Request url: None.${\n}Response: None</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240531 06:26:12.397" level="INFO">${_detail_request} = Request url: None.
-Response: None</msg>
-<status status="PASS" starttime="20240531 06:26:12.370" endtime="20240531 06:26:12.397"/>
+<status status="FAIL" start="2024-06-01T19:45:37.569262" elapsed="0.008674">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${BO_URL.${ENV}}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240531 06:26:12.410" level="INFO">Opening url 'https://bo-stg.sportb2.com/'</msg>
-<status status="PASS" starttime="20240531 06:26:12.397" endtime="20240531 06:26:13.629"/>
+<status status="FAIL" start="2024-06-01T19:45:37.568150" elapsed="0.009786">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
-<status status="PASS" starttime="20240531 06:26:12.369" endtime="20240531 06:26:13.629"/>
+<kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;" source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<status status="NOT RUN" start="2024-06-01T19:45:37.577936" elapsed="0.000000"/>
 </kw>
-<kw name="BOLoginPage.Login with email and password successfully" library="BOLoginPage">
-<arg>${ADMIN_CONF_EMAIL_02.${ENV}}</arg>
-<arg>${ADMIN_CONF_PASS_02.${ENV}}</arg>
-<doc>This keyword is to login to SB2 successfully. This is also to try and circumvent the Login issues in jenkins run</doc>
-<while condition="${True}" limit="3">
-<iter>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${status}</var>
-<arg>BOLoginPage.Login with email and password</arg>
-<arg>${p_email}</arg>
-<arg>${p_password}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="BOLoginPage.Login with email and password" library="BOLoginPage">
-<arg>${p_email}</arg>
-<arg>${p_password}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${txt_BOLogin_email}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:13.653" endtime="20240531 06:26:13.668"/>
+<kw name="Then welcome page should be open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.578929" elapsed="0.000000"/>
 </kw>
-<kw name="common.Input text to textbox" library="common">
-<arg>${txt_BOLogin_email}</arg>
-<arg>${p_email}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:13.668" endtime="20240531 06:26:13.675"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-01T19:45:37.579930" elapsed="0.000000"/>
 </kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240531 06:26:13.675" endtime="20240531 06:26:13.690"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>${p_text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:13.691" level="INFO">Typing text 'auto_conf_002@mailinator.com' into text field '//input[@formcontrolname='loginId']'.</msg>
-<status status="PASS" starttime="20240531 06:26:13.691" endtime="20240531 06:26:13.776"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:13.668" endtime="20240531 06:26:13.776"/>
-</kw>
-<kw name="common.Input text to textbox" library="common">
-<arg>${txt_BOLogin_password}</arg>
-<arg>${p_password}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:13.777" endtime="20240531 06:26:13.785"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20240531 06:26:13.785" endtime="20240531 06:26:13.797"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>${p_text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:13.798" level="INFO">Typing text 'Abc.123!' into text field '//input[@formcontrolname='password']'.</msg>
-<status status="PASS" starttime="20240531 06:26:13.797" endtime="20240531 06:26:13.831"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:13.777" endtime="20240531 06:26:13.832"/>
-</kw>
-<kw name="common.Click to element" library="common">
-<arg>${btn_BOLogin_login}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:13.832" endtime="20240531 06:26:13.842"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:13.843" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20240531 06:26:13.842" endtime="20240531 06:26:13.861"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:13.832" endtime="20240531 06:26:13.861"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${btn_BOLogin_login}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240531 06:26:13.862" endtime="20240531 06:26:15.758"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:13.653" endtime="20240531 06:26:15.758"/>
-</kw>
-<msg timestamp="20240531 06:26:15.758" level="INFO">${status} = True</msg>
-<status status="PASS" starttime="20240531 06:26:13.653" endtime="20240531 06:26:15.759"/>
-</kw>
-<if>
-<branch type="IF" condition="${status} == ${False}">
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="NOT RUN" starttime="20240531 06:26:15.759" endtime="20240531 06:26:15.759"/>
-</kw>
-<kw name="BOLoginPage.Login with email and password" library="BOLoginPage">
-<arg>${p_email}</arg>
-<arg>${p_password}</arg>
-<status status="NOT RUN" starttime="20240531 06:26:15.760" endtime="20240531 06:26:15.760"/>
-</kw>
-<status status="NOT RUN" starttime="20240531 06:26:15.759" endtime="20240531 06:26:15.760"/>
-</branch>
-<status status="PASS" starttime="20240531 06:26:15.759" endtime="20240531 06:26:15.760"/>
-</if>
-<kw name="BOLoginPage.HomePage is present" library="BOLoginPage">
-<arg>${p_email}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${btn_BOHome_email}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:15.760" endtime="20240531 06:26:15.770"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>${btn_BOHome_email}</arg>
-<arg>${p_email}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20240531 06:26:15.770" level="INFO">Verifying element '//div[@class='accout-style']/a' contains exact text 'auto_conf_002@mailinator.com'.</msg>
-<status status="PASS" starttime="20240531 06:26:15.770" endtime="20240531 06:26:15.783"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${icon_loadingBar}</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240531 06:26:15.783" endtime="20240531 06:26:16.438"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:15.760" endtime="20240531 06:26:16.439"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${passed}</var>
-<arg>BetsManagerPage.Navigate to Bet Manager page</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="BetsManagerPage.Navigate to Bet Manager page" library="BetsManagerPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${lb_bets}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:16.443" level="INFO">Clicking element '//a[@href='#/bet-manager']'.</msg>
-<status status="PASS" starttime="20240531 06:26:16.442" endtime="20240531 06:26:16.472"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${t_betsPage_ticketId}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:16.472" endtime="20240531 06:26:18.148"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:16.441" endtime="20240531 06:26:18.148"/>
-</kw>
-<msg timestamp="20240531 06:26:18.148" level="INFO">${passed} = True</msg>
-<status status="PASS" starttime="20240531 06:26:16.440" endtime="20240531 06:26:18.148"/>
-</kw>
-<if>
-<branch type="IF" condition="${passed}">
-<kw name="BetsManagerPage.Navigate to Dashboard page" library="BODashboardPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${lb_dashboard}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:18.150" level="INFO">Clicking element '//a[@href='#/sb2']'.</msg>
-<status status="PASS" starttime="20240531 06:26:18.150" endtime="20240531 06:26:18.186"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:18.149" endtime="20240531 06:26:18.187"/>
-</kw>
-<kw name="BOLoginPage.HomePage is present" library="BOLoginPage">
-<arg>${p_email}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${btn_BOHome_email}</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:18.190" endtime="20240531 06:26:18.199"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>${btn_BOHome_email}</arg>
-<arg>${p_email}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20240531 06:26:18.200" level="INFO">Verifying element '//div[@class='accout-style']/a' contains exact text 'auto_conf_002@mailinator.com'.</msg>
-<status status="PASS" starttime="20240531 06:26:18.199" endtime="20240531 06:26:18.208"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${icon_loadingBar}</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20240531 06:26:18.208" endtime="20240531 06:26:18.635"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:18.188" endtime="20240531 06:26:18.635"/>
-</kw>
-<break>
-<status status="PASS" starttime="20240531 06:26:18.635" endtime="20240531 06:26:18.636"/>
-</break>
-<status status="PASS" starttime="20240531 06:26:18.149" endtime="20240531 06:26:18.636"/>
-</branch>
-<status status="PASS" starttime="20240531 06:26:18.149" endtime="20240531 06:26:18.636"/>
-</if>
-<status status="PASS" starttime="20240531 06:26:13.652" endtime="20240531 06:26:18.636"/>
-</iter>
-<status status="PASS" starttime="20240531 06:26:13.652" endtime="20240531 06:26:18.636"/>
-</while>
-<status status="PASS" starttime="20240531 06:26:13.629" endtime="20240531 06:26:18.636"/>
-</kw>
-<kw name="AdminConfPage.Navigate to Admin Configuration page" library="AdminConfPage">
-<kw name="AdminListPage.Navigate to Admin List page" library="AdminListPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${lb_configuration}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:18.638" level="INFO">Clicking element '//a[@href='#/configuration']'.</msg>
-<status status="PASS" starttime="20240531 06:26:18.638" endtime="20240531 06:26:18.665"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>(//div[@name='email'])[1]</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:18.665" endtime="20240531 06:26:20.550"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Admin List - Back Office</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20240531 06:26:20.553" level="INFO">Page title is 'Admin List - Back Office'.</msg>
-<status status="PASS" starttime="20240531 06:26:20.551" endtime="20240531 06:26:20.553"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:18.637" endtime="20240531 06:26:20.553"/>
-</kw>
-<kw name="common.Click to element" library="common">
-<arg>${lb_confPage_adminConfiguration}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:20.554" endtime="20240531 06:26:20.565"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:20.565" level="INFO">Clicking element '//span[contains(.,'Admin Configuration')]'.</msg>
-<status status="PASS" starttime="20240531 06:26:20.565" endtime="20240531 06:26:20.591"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:20.554" endtime="20240531 06:26:20.591"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_adminRole}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:20.592" endtime="20240531 06:26:20.600"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:18.636" endtime="20240531 06:26:20.601"/>
-</kw>
-<kw name="AdminConfPage.Admin Conf page is present" library="AdminConfPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${t_confPage_superAdmin}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:20.602" endtime="20240531 06:26:21.440"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Admin Configuration - Back Office</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20240531 06:26:21.444" level="INFO">Page title is 'Admin Configuration - Back Office'.</msg>
-<status status="PASS" starttime="20240531 06:26:21.441" endtime="20240531 06:26:21.444"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:20.601" endtime="20240531 06:26:21.444"/>
-</kw>
-<kw name="AdminConfPage.Select Admin Role" library="AdminConfPage">
-<arg>admin</arg>
-<kw name="Set Variable" library="BuiltIn">
-<var>${adminRoleRadioButton}</var>
-<arg>//div[@class='wrap-left-config']//div[@name='name'][text()='${p_adminRole}']/preceding-sibling::div/label[@name='id']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 06:26:21.446" level="INFO">${adminRoleRadioButton} = //div[@class='wrap-left-config']//div[@name='name'][text()='admin']/preceding-sibling::div/label[@name='id']</msg>
-<status status="PASS" starttime="20240531 06:26:21.445" endtime="20240531 06:26:21.446"/>
-</kw>
-<kw name="common.Click to element" library="common">
-<arg>${adminRoleRadioButton}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:21.446" endtime="20240531 06:26:21.458"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:21.459" level="INFO">Clicking element '//div[@class='wrap-left-config']//div[@name='name'][text()='admin']/preceding-sibling::div/label[@name='id']'.</msg>
-<status status="PASS" starttime="20240531 06:26:21.458" endtime="20240531 06:26:21.488"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:21.446" endtime="20240531 06:26:21.488"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:21.445" endtime="20240531 06:26:21.488"/>
-</kw>
-<kw name="AdminConfPage.Select Admin Email" library="AdminConfPage">
-<arg>auto_bo_vip001@mailinator.com</arg>
-<kw name="Set Variable" library="BuiltIn">
-<var>${adminRadioButton}</var>
-<arg>//div[@class='wrap-middle-config']//div[@name='email'][text()='${p_adminEmail}']/preceding-sibling::div//label[@name='id']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240531 06:26:21.489" level="INFO">${adminRadioButton} = //div[@class='wrap-middle-config']//div[@name='email'][text()='auto_bo_vip001@mailinator.com']/preceding-sibling::div//label[@name='id']</msg>
-<status status="PASS" starttime="20240531 06:26:21.489" endtime="20240531 06:26:21.489"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${adminRadioButton}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:21.490" endtime="20240531 06:26:21.920"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${adminRadioButton}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240531 06:26:21.920" endtime="20240531 06:26:22.190"/>
-</kw>
-<kw name="common.Click to element" library="common">
-<arg>${adminRadioButton}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:22.191" endtime="20240531 06:26:22.203"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:22.204" level="INFO">Clicking element '//div[@class='wrap-middle-config']//div[@name='email'][text()='auto_bo_vip001@mailinator.com']/preceding-sibling::div//label[@name='id']'.</msg>
-<status status="PASS" starttime="20240531 06:26:22.204" endtime="20240531 06:26:22.702"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:22.191" endtime="20240531 06:26:22.703"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:21.489" endtime="20240531 06:26:22.703"/>
-</kw>
-<kw name="AdminConfPage.Expand Risk" library="AdminConfPage">
-<kw name="common.Click to element" library="common">
-<arg>${btn_confPage_adminRights_risk_expand}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:22.705" endtime="20240531 06:26:23.345"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:23.346" level="INFO">Clicking element '//strong[@class='pl-3'][text()='Risk']/preceding-sibling::div[@class='wrap-icon'][app-icons[@name='expand-plus']]'.</msg>
-<status status="PASS" starttime="20240531 06:26:23.346" endtime="20240531 06:26:23.383"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:22.704" endtime="20240531 06:26:23.383"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:22.704" endtime="20240531 06:26:23.383"/>
-</kw>
-<kw name="AdminConfPage.Verify Risk is displayed in Admin Rights" library="AdminConfPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_adminRights_risk}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.384" endtime="20240531 06:26:23.397"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${btn_confPage_adminRights_risk}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.397" endtime="20240531 06:26:23.409"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_adminRights_risk_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.410" endtime="20240531 06:26:23.422"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_adminRights_risk_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.423" endtime="20240531 06:26:23.433"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_risk_riskManager}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.433" endtime="20240531 06:26:23.443"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_risk_fraudManager}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.443" endtime="20240531 06:26:23.456"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${btn_confPage_risk_fraudManager}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.456" endtime="20240531 06:26:23.467"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_risk_fraudManager_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.467" endtime="20240531 06:26:23.478"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_risk_fraudManager_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.479" endtime="20240531 06:26:23.490"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.384" endtime="20240531 06:26:23.490"/>
-</kw>
-<kw name="AdminConfPage.Expand Risk &gt; Fraud Manager" library="AdminConfPage">
-<kw name="common.Click to element" library="common">
-<arg>${btn_confPage_risk_fraudManager_expand}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.491" endtime="20240531 06:26:23.504"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:23.504" level="INFO">Clicking element '//strong[@class='pl-3'][text()='Fraud Manager']/preceding-sibling::div[@class='wrap-icon'][app-icons[@name='expand-plus']]'.</msg>
-<status status="PASS" starttime="20240531 06:26:23.504" endtime="20240531 06:26:23.529"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.491" endtime="20240531 06:26:23.530"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.491" endtime="20240531 06:26:23.530"/>
-</kw>
-<kw name="AdminConfPage.Verify Fraud Manager is displayed in Admin Rights &gt; Risk" library="AdminConfPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_deleteFraudComment}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.531" endtime="20240531 06:26:23.539"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_deleteFraudComment_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.540" endtime="20240531 06:26:23.548"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_deleteFraudComment_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.548" endtime="20240531 06:26:23.556"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_reportFraud}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.556" endtime="20240531 06:26:23.564"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_reportFraud_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.564" endtime="20240531 06:26:23.572"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_reportFraud_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.572" endtime="20240531 06:26:23.580"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_caseDashboard}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.580" endtime="20240531 06:26:23.588"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_caseDashboard_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.588" endtime="20240531 06:26:23.596"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_caseDashboard_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.596" endtime="20240531 06:26:23.604"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_fraudComment}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.604" endtime="20240531 06:26:23.611"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_fraudComment_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.611" endtime="20240531 06:26:23.619"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_fraudComment_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.619" endtime="20240531 06:26:23.627"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_recheckButton}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.628" endtime="20240531 06:26:23.635"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_recheckButton_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.635" endtime="20240531 06:26:23.643"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_recheckButton_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.643" endtime="20240531 06:26:23.650"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.651" endtime="20240531 06:26:23.658"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${btn_confPage_fraudManager_dataDisplay}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.659" endtime="20240531 06:26:23.666"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_groupPlayerBetting}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.666" endtime="20240531 06:26:23.673"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_groupPlayerBetting_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.673" endtime="20240531 06:26:23.680"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_groupPlayerBetting_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.680" endtime="20240531 06:26:23.687"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_ipBank}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.687" endtime="20240531 06:26:23.694"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_ipBank_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.695" endtime="20240531 06:26:23.702"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_ipBank_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.702" endtime="20240531 06:26:23.709"/>
-</kw>
-<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_ipBank_write}</arg>
-<arg>timeout=20s</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20240531 06:26:23.714" level="INFO">Element '//label[@for='409write']' did not exist.</msg>
-<status status="PASS" starttime="20240531 06:26:23.710" endtime="20240531 06:26:23.714"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.530" endtime="20240531 06:26:23.715"/>
-</kw>
-<kw name="AdminConfPage.Expand Risk &gt; Fraud Manager &gt; Data display" library="AdminConfPage">
-<kw name="common.Click to element" library="common">
-<arg>${btn_confPage_fraudManager_dataDisplay_expand}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.716" endtime="20240531 06:26:23.723"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${p_element}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240531 06:26:23.724" level="INFO">Clicking element '//strong[@class='pl-3'][text()='Data display']/preceding-sibling::div[@class='wrap-icon'][app-icons[@name='expand-plus']]'.</msg>
-<status status="PASS" starttime="20240531 06:26:23.724" endtime="20240531 06:26:23.748"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.716" endtime="20240531 06:26:23.749"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.715" endtime="20240531 06:26:23.749"/>
-</kw>
-<kw name="AdminConfPage.Verify Data display is displayed in Admin Rights &gt; Risk &gt; Fraud Manager" library="AdminConfPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_3months}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.750" endtime="20240531 06:26:23.758"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_3months_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.758" endtime="20240531 06:26:23.766"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_6months}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.766" endtime="20240531 06:26:23.774"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_6months_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.775" endtime="20240531 06:26:23.782"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_1year}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.782" endtime="20240531 06:26:23.790"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_1year_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.790" endtime="20240531 06:26:23.798"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_2years}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.798" endtime="20240531 06:26:23.806"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_2years_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.806" endtime="20240531 06:26:23.813"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_3years}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.813" endtime="20240531 06:26:23.821"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_3years_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.821" endtime="20240531 06:26:23.829"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_allTime}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.829" endtime="20240531 06:26:23.836"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_allTime_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.837" endtime="20240531 06:26:23.844"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_realDataDisplay}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.845" endtime="20240531 06:26:23.852"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_realDataDisplay_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.853" endtime="20240531 06:26:23.860"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_realDataDisplay_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.861" endtime="20240531 06:26:23.869"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lb_confPage_fraudManager_dataDisplay_displayUsername}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.869" endtime="20240531 06:26:23.876"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_displayUsername_none}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.877" endtime="20240531 06:26:23.884"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${rd_confPage_fraudManager_dataDisplay_displayUsername_read}</arg>
-<arg>timeout=20s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240531 06:26:23.884" endtime="20240531 06:26:23.892"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.749" endtime="20240531 06:26:23.892"/>
-</kw>
-<kw name="common.Capture screenshot and clear browser cache" library="common" type="TEARDOWN">
-<kw name="Run Keyword If Test Failed" library="BuiltIn">
-<arg>Capture Page Screenshot</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" starttime="20240531 06:26:23.893" endtime="20240531 06:26:23.893"/>
-</kw>
-<kw name="Custom Clear All Cache" library="DriverManager">
-<status status="PASS" starttime="20240531 06:26:23.893" endtime="20240531 06:26:23.940"/>
-</kw>
-<status status="PASS" starttime="20240531 06:26:23.892" endtime="20240531 06:26:23.940"/>
-</kw>
-<doc>Automate the following features SPR-10708 SPR-13055
-test cases T124892</doc>
-<tag>Regression</tag>
-<status status="PASS" starttime="20240531 06:26:12.365" endtime="20240531 06:26:23.941"/>
+<doc>This test case demonstrates a valid login.
+test cases T3 T7</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.567460" elapsed="0.012970">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </test>
-<kw name="common.Close current browser" library="common" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20240531 06:26:23.942" endtime="20240531 06:26:24.025"/>
+<doc>A test suite with a single Gherkin style test.
+
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.409244" elapsed="0.172254"/>
+</suite>
+<suite id="s1-s2" name="Invalid Login" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\invalid_login.robot">
+<kw name="Open Browser To Login Page" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:45:37.587512" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:7272/'.</msg>
+<msg time="2024-06-01T19:45:37.589490" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-01T19:45:37.589490" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${FIREFOX DRIVER}</arg>
+<arg>options=add_argument("--headless --no-sandbox --disable-dev-shm-usage --allow-downgrade")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.587512" elapsed="0.003000">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </kw>
-<status status="PASS" starttime="20240531 06:26:23.941" endtime="20240531 06:26:24.025"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.590512" elapsed="0.000000"/>
 </kw>
-<status status="PASS" starttime="20240531 06:26:00.393" endtime="20240531 06:26:24.025"/>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.590512" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.590512" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-01T19:45:37.586517" elapsed="0.003995">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<test id="s1-s2-t1" name="Invalid Username" line="17">
+<status status="FAIL" start="2024-06-01T19:45:37.590512" elapsed="0.000000">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s2-t2" name="Invalid Password" line="18">
+<status status="FAIL" start="2024-06-01T19:45:37.591926" elapsed="0.000949">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s2-t3" name="Invalid Username And Password" line="19">
+<status status="FAIL" start="2024-06-01T19:45:37.592875" elapsed="0.001198">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s2-t4" name="Empty Username" line="20">
+<status status="FAIL" start="2024-06-01T19:45:37.595310" elapsed="0.000000">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s2-t5" name="Empty Password" line="21">
+<status status="FAIL" start="2024-06-01T19:45:37.596670" elapsed="0.001122">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s2-t6" name="Empty Username And Password" line="22">
+<status status="FAIL" start="2024-06-01T19:45:37.598299" elapsed="0.001117">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-01T19:45:37.600528" elapsed="0.000000"/>
+</kw>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.582516" elapsed="0.018012">Suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
 </suite>
-<status status="PASS" starttime="20240531 06:26:00.392" endtime="20240531 06:26:24.027"/>
+<suite id="s1-s3" name="Valid Login" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\valid_login.robot">
+<test id="s1-s3-t1" name="Valid Login With Resource" line="9">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T19:45:37.607122" level="INFO">Opening browser 'Firefox' to base url 'http://localhost:7272/'.</msg>
+<msg time="2024-06-01T19:45:37.609316" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-01T19:45:37.609316" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${FIREFOX DRIVER}</arg>
+<arg>options=add_argument("--headless --no-sandbox --disable-dev-shm-usage --allow-downgrade")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.606613" elapsed="0.003952">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.610565" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-06-01T19:45:37.610565" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.610565" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-01T19:45:37.605613" elapsed="0.004952">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Username" owner="resource">
+<arg>demo</arg>
+<status status="NOT RUN" start="2024-06-01T19:45:37.610565" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<arg>mode</arg>
+<status status="NOT RUN" start="2024-06-01T19:45:37.611582" elapsed="0.000000"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.611582" elapsed="0.000000"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T19:45:37.611582" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-01T19:45:37.613091" elapsed="0.000000"/>
+</kw>
+<doc>This test case demonstrates a valid login.
+test cases T12 T10</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.605613" elapsed="0.007478">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" start="2024-06-01T19:45:37.601033" elapsed="0.013251"/>
 </suite>
-<status status="PASS" starttime="20240531 06:26:00.391" endtime="20240531 06:26:24.027"/>
-</suite>
-<status status="PASS" starttime="20240531 06:26:00.391" endtime="20240531 06:26:24.028"/>
-</suite>
-<status status="PASS" starttime="20240531 06:26:00.390" endtime="20240531 06:26:24.029"/>
-</suite>
-<status status="PASS" starttime="20240531 06:26:00.389" endtime="20240531 06:26:24.029"/>
-</suite>
-<status status="PASS" starttime="20240531 06:26:00.388" endtime="20240531 06:26:24.030"/>
-</suite>
-<status status="PASS" starttime="20240531 06:26:00.376" endtime="20240531 06:26:24.031"/>
+<status status="FAIL" start="2024-06-01T19:45:37.387616" elapsed="0.227891"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Regression</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Sportsbook-Automation">Sportsbook-Automation</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Src">Sportsbook-Automation.Src</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Sb2">Sportsbook-Automation.Src.Sb2</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Tests">Sportsbook-Automation.Src.Sb2.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="SB2 Tests">Sportsbook-Automation.Src.Sb2.Tests.SB2 Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="03 BOAdminTests">Sportsbook-Automation.Src.Sb2.Tests.SB2 Tests.03 BOAdminTests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1" name="BOConfigurationsTests">Sportsbook-Automation.Src.Sb2.Tests.SB2 Tests.03 BOAdminTests.BOConfigurationsTests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1-s1-s1" name="AdminConfTest">Sportsbook-Automation.Src.Sb2.Tests.SB2 Tests.03 BOAdminTests.BOConfigurationsTests.AdminConfTest</stat>
+<stat pass="0" fail="8" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Gherkin Login">Login Tests.Gherkin Login</stat>
+<stat pass="0" fail="6" skip="0" id="s1-s2" name="Invalid Login">Login Tests.Invalid Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="Valid Login">Login Tests.Valid Login</stat>
 </suite>
 </statistics>
 <errors>
