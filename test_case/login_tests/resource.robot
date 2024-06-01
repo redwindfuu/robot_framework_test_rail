@@ -10,7 +10,7 @@ Library           TestMetadata.py
 
 *** Variables ***
 ${SERVER}         localhost:7272
-${BROWSER}        Chrome
+${BROWSER}        Firefox
 ${DELAY}          0
 ${VALID USER}     demo
 ${VALID PASSWORD}    mode
@@ -18,13 +18,12 @@ ${LOGIN URL}      http://${SERVER}/
 ${WELCOME URL}    http://${SERVER}/welcome.html
 ${ERROR URL}      http://${SERVER}/error.html
 #link chrome driver
-${CHROME_DRIVER}   /app/chromedriver
+${FIREFOX DRIVER}    /app/geckodriver
 
 *** Keywords ***
 Open Browser To Login Page
-    
-    
-    Open Browser    ${LOGIN URL}   ${BROWSER}
+
+    Open Browser    ${LOGIN URL}   ${BROWSER}   executable_path=${FIREFOX DRIVER}  options=add_argument("--headless --no-sandbox --disable-dev-shm-usage --allow-downgrade")
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open

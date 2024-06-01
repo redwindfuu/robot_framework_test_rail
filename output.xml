@@ -1,248 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-05-31T09:50:28.989664" rpa="false"
-       schemaversion="5">
-    <suite id="s1" name="Tester" source="D:\Workspace\Phong\Ari\tester">
-        <suite id="s1-s1" name="Test Case" source="D:\Workspace\Phong\Ari\tester\test_case">
-            <suite id="s1-s1-s1" name="Login Tests" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests">
-                <suite id="s1-s1-s1-s1" name="Gherkin Login"
-                       source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\gherkin_login.robot">
-                    <test id="s1-s1-s1-s1-t1" name="Valid Login" line="10">
-                        <kw name="Given browser is opened to login page">
-                            <kw name="Open Browser To Login Page" owner="resource">
-                                <kw name="Open Browser" owner="SeleniumLibrary">
-                                    <msg time="2024-05-31T09:50:29.270817" level="INFO">Opening browser 'Chrome' to base
-                                        url 'http://localhost:7272/'.
-                                    </msg>
-                                    <msg time="2024-05-31T09:50:35.667633" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td
-                                        colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img
-                                        src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;
-                                    </msg>
-                                    <msg time="2024-05-31T09:50:35.667633" level="FAIL">WebDriverException: Message:
-                                        unknown error: net::ERR_CONNECTION_REFUSED
-                                        (Session info: chrome=125.0.6422.113)
-                                        Stacktrace:
-                                        GetHandleVerifier [0x00007FF7F68B1F52+60322]
-                                        (No symbol) [0x00007FF7F682CEC9]
-                                        (No symbol) [0x00007FF7F66E7EBA]
-                                        (No symbol) [0x00007FF7F66DFEA2]
-                                        (No symbol) [0x00007FF7F66D09C4]
-                                        (No symbol) [0x00007FF7F66D2212]
-                                        (No symbol) [0x00007FF7F66D0CF1]
-                                        (No symbol) [0x00007FF7F66D04D1]
-                                        (No symbol) [0x00007FF7F66D0410]
-                                        (No symbol) [0x00007FF7F66CE39D]
-                                        (No symbol) [0x00007FF7F66CE9DC]
-                                        (No symbol) [0x00007FF7F66EAC91]
-                                        (No symbol) [0x00007FF7F677C5FE]
-                                        (No symbol) [0x00007FF7F675C21A]
-                                        (No symbol) [0x00007FF7F677BC80]
-                                        (No symbol) [0x00007FF7F675BFC3]
-                                        (No symbol) [0x00007FF7F6729617]
-                                        (No symbol) [0x00007FF7F672A211]
-                                        GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
-                                        GetHandleVerifier [0x00007FF7F6C136D3+3605283]
-                                        GetHandleVerifier [0x00007FF7F6C09450+3563680]
-                                        GetHandleVerifier [0x00007FF7F6964326+790390]
-                                        (No symbol) [0x00007FF7F683750F]
-                                        (No symbol) [0x00007FF7F6833404]
-                                        (No symbol) [0x00007FF7F6833592]
-                                        (No symbol) [0x00007FF7F6822F9F]
-                                        BaseThreadInitThunk [0x00007FF9BC4F257D+29]
-                                        RtlUserThreadStart [0x00007FF9BD60AA48+40]
-                                    </msg>
-                                    <arg>${LOGIN URL}</arg>
-                                    <arg>${BROWSER}</arg>
-                                    <doc>Opens a new browser instance to the optional ``url``.</doc>
-                                    <status status="FAIL" start="2024-05-31T09:50:29.270817" elapsed="6.398324">
-                                        WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-                                        (Session info: chrome=125.0.6422.113)
-                                        Stacktrace:
-                                        GetHandleVerifier [0x00007FF7F68B1F52+60322]
-                                        (No symbol) [0x00007FF7F682CEC9]
-                                        (No symbol) [0x00007FF7F66E7EBA]
-                                        (No symbol) [0x00007FF7F66DFEA2]
-                                        (No symbol) [0x00007FF7F66D09C4]
-                                        (No symbol) [0x00007FF7F66D2212]
-                                        (No symbol) [0x00007FF7F66D0CF1]
-                                        (No symbol) [0x00007FF7F66D04D1]
-                                        (No symbol) [0x00007FF7F66D0410]
-                                        (No symbol) [0x00007FF7F66CE39D]
-                                        (No symbol) [0x00007FF7F66CE9DC]
-                                        (No symbol) [0x00007FF7F66EAC91]
-                                        (No symbol) [0x00007FF7F677C5FE]
-                                        (No symbol) [0x00007FF7F675C21A]
-                                        (No symbol) [0x00007FF7F677BC80]
-                                        (No symbol) [0x00007FF7F675BFC3]
-                                        (No symbol) [0x00007FF7F6729617]
-                                        (No symbol) [0x00007FF7F672A211]
-                                        GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
-                                        GetHandleVerifier [0x00007FF7F6C136D3+3605283]
-                                        GetHandleVerifier [0x00007FF7F6C09450+3563680]
-                                        GetHandleVerifier [0x00007FF7F6964326+790390]
-                                        (No symbol) [0x00007FF7F683750F]
-                                        (No symbol) [0x00007FF7F6833404]
-                                        (No symbol) [0x00007FF7F6833592]
-                                        (No symbol) [0x00007FF7F6822F9F]
-                                        BaseThreadInitThunk [0x00007FF9BC4F257D+29]
-                                        RtlUserThreadStart [0x00007FF9BD60AA48+40]
-                                    </status>
-                                </kw>
-                                <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-                                    <doc>Maximizes current browser window.</doc>
-                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670458" elapsed="0.000000"/>
-                                </kw>
-                                <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-                                    <arg>${DELAY}</arg>
-                                    <doc>Sets the delay that is waited after each Selenium command.</doc>
-                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670969" elapsed="0.000000"/>
-                                </kw>
-                                <kw name="Login Page Should Be Open" owner="resource">
-                                    <status status="NOT RUN" start="2024-05-31T09:50:35.670969" elapsed="0.000000"/>
-                                </kw>
-                                <status status="FAIL" start="2024-05-31T09:50:29.270817" elapsed="6.400152">
-                                    WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-                                    (Session info: chrome=125.0.6422.113)
-                                    Stacktrace:
-                                    GetHandleVerifier [0x00007FF7F68B1F52+60322]
-                                    (No symbol) [0x00007FF7F682CEC9]
-                                    (No symbol) [0x00007FF7F66E7EBA]
-                                    (No symbol) [0x00007FF7F66DFEA2]
-                                    (No symbol) [0x00007FF7F66D09C4]
-                                    (No symbol) [0x00007FF7F66D2212]
-                                    (No symbol) [0x00007FF7F66D0CF1]
-                                    (No symbol) [0x00007FF7F66D04D1]
-                                    (No symbol) [0x00007FF7F66D0410]
-                                    (No symbol) [0x00007FF7F66CE39D]
-                                    (No symbol) [0x00007FF7F66CE9DC]
-                                    (No symbol) [0x00007FF7F66EAC91]
-                                    (No symbol) [0x00007FF7F677C5FE]
-                                    (No symbol) [0x00007FF7F675C21A]
-                                    (No symbol) [0x00007FF7F677BC80]
-                                    (No symbol) [0x00007FF7F675BFC3]
-                                    (No symbol) [0x00007FF7F6729617]
-                                    (No symbol) [0x00007FF7F672A211]
-                                    GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
-                                    GetHandleVerifier [0x00007FF7F6C136D3+3605283]
-                                    GetHandleVerifier [0x00007FF7F6C09450+3563680]
-                                    GetHandleVerifier [0x00007FF7F6964326+790390]
-                                    (No symbol) [0x00007FF7F683750F]
-                                    (No symbol) [0x00007FF7F6833404]
-                                    (No symbol) [0x00007FF7F6833592]
-                                    (No symbol) [0x00007FF7F6822F9F]
-                                    BaseThreadInitThunk [0x00007FF9BC4F257D+29]
-                                    RtlUserThreadStart [0x00007FF9BD60AA48+40]
-                                </status>
-                            </kw>
-                            <status status="FAIL" start="2024-05-31T09:50:29.269817" elapsed="6.401152">
-                                WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-                                (Session info: chrome=125.0.6422.113)
-                                Stacktrace:
-                                GetHandleVerifier [0x00007FF7F68B1F52+60322]
-                                (No symbol) [0x00007FF7F682CEC9]
-                                (No symbol) [0x00007FF7F66E7EBA]
-                                (No symbol) [0x00007FF7F66DFEA2]
-                                (No symbol) [0x00007FF7F66D09C4]
-                                (No symbol) [0x00007FF7F66D2212]
-                                (No symbol) [0x00007FF7F66D0CF1]
-                                (No symbol) [0x00007FF7F66D04D1]
-                                (No symbol) [0x00007FF7F66D0410]
-                                (No symbol) [0x00007FF7F66CE39D]
-                                (No symbol) [0x00007FF7F66CE9DC]
-                                (No symbol) [0x00007FF7F66EAC91]
-                                (No symbol) [0x00007FF7F677C5FE]
-                                (No symbol) [0x00007FF7F675C21A]
-                                (No symbol) [0x00007FF7F677BC80]
-                                (No symbol) [0x00007FF7F675BFC3]
-                                (No symbol) [0x00007FF7F6729617]
-                                (No symbol) [0x00007FF7F672A211]
-                                GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
-                                GetHandleVerifier [0x00007FF7F6C136D3+3605283]
-                                GetHandleVerifier [0x00007FF7F6C09450+3563680]
-                                GetHandleVerifier [0x00007FF7F6964326+790390]
-                                (No symbol) [0x00007FF7F683750F]
-                                (No symbol) [0x00007FF7F6833404]
-                                (No symbol) [0x00007FF7F6833592]
-                                (No symbol) [0x00007FF7F6822F9F]
-                                BaseThreadInitThunk [0x00007FF9BC4F257D+29]
-                                RtlUserThreadStart [0x00007FF9BD60AA48+40]
-                            </status>
-                        </kw>
-                        <kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;"
-                            source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
-                            <status status="NOT RUN" start="2024-05-31T09:50:35.671979" elapsed="0.001005"/>
-                        </kw>
-                        <kw name="Then welcome page should be open" owner="resource">
-                            <status status="NOT RUN" start="2024-05-31T09:50:35.673494" elapsed="0.000000"/>
-                        </kw>
-                        <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-                            <doc>Closes the current browser.</doc>
-                            <status status="PASS" start="2024-05-31T09:50:35.673494" elapsed="2.166027"/>
-                        </kw>
-                        <doc>This test case demonstrates a valid login.
-                            test cases T3 T7
-                        </doc>
-                        <status status="FAIL" start="2024-05-31T09:50:29.268808" elapsed="8.571684">WebDriverException:
-                            Message: unknown error: net::ERR_CONNECTION_REFUSED
-                            (Session info: chrome=125.0.6422.113)
-                            Stacktrace:
-                            GetHandleVerifier [0x00007FF7F68B1F52+60322]
-                            (No symbol) [0x00007FF7F682CEC9]
-                            (No symbol) [0x00007FF7F66E7EBA]
-                            (No symbol) [0x00007FF7F66DFEA2]
-                            (No symbol) [0x00007FF7F66D09C4]
-                            (No symbol) [0x00007FF7F66D2212]
-                            (No symbol) [0x00007FF7F66D0CF1]
-                            (No symbol) [0x00007FF7F66D04D1]
-                            (No symbol) [0x00007FF7F66D0410]
-                            (No symbol) [0x00007FF7F66CE39D]
-                            (No symbol) [0x00007FF7F66CE9DC]
-                            (No symbol) [0x00007FF7F66EAC91]
-                            (No symbol) [0x00007FF7F677C5FE]
-                            (No symbol) [0x00007FF7F675C21A]
-                            (No symbol) [0x00007FF7F677BC80]
-                            (No symbol) [0x00007FF7F675BFC3]
-                            (No symbol) [0x00007FF7F6729617]
-                            (No symbol) [0x00007FF7F672A211]
-                            GetHandleVerifier [0x00007FF7F6BC94AD+3301629]
-                            GetHandleVerifier [0x00007FF7F6C136D3+3605283]
-                            GetHandleVerifier [0x00007FF7F6C09450+3563680]
-                            GetHandleVerifier [0x00007FF7F6964326+790390]
-                            (No symbol) [0x00007FF7F683750F]
-                            (No symbol) [0x00007FF7F6833404]
-                            (No symbol) [0x00007FF7F6833592]
-                            (No symbol) [0x00007FF7F6822F9F]
-                            BaseThreadInitThunk [0x00007FF9BC4F257D+29]
-                            RtlUserThreadStart [0x00007FF9BD60AA48+40]
-                        </status>
-                    </test>
-                    <doc>A test suite with a single Gherkin style test.
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-06-01T16:16:31.238604" rpa="false" schemaversion="5">
+<suite id="s1" name="Tester" source="D:\Workspace\Phong\Ari\tester">
+<suite id="s1-s1" name="Test Case" source="D:\Workspace\Phong\Ari\tester\test_case">
+<suite id="s1-s1-s1" name="Login Tests" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests">
+<suite id="s1-s1-s1-s1" name="Gherkin Login" source="D:\Workspace\Phong\Ari\tester\test_case\login_tests\gherkin_login.robot">
+<test id="s1-s1-s1-s1-t1" name="Valid Login" line="10">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T16:16:31.522130" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/'.</msg>
+<msg time="2024-06-01T16:16:37.951293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-01T16:16:37.951293" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=125.0.6422.113)
+Stacktrace:
+	GetHandleVerifier [0x00007FF616981F52+60322]
+	(No symbol) [0x00007FF6168FCEC9]
+	(No symbol) [0x00007FF6167B7EBA]
+	(No symbol) [0x00007FF6167AFEA2]
+	(No symbol) [0x00007FF6167A09C4]
+	(No symbol) [0x00007FF6167A2212]
+	(No symbol) [0x00007FF6167A0CF1]
+	(No symbol) [0x00007FF6167A04D1]
+	(No symbol) [0x00007FF6167A0410]
+	(No symbol) [0x00007FF61679E39D]
+	(No symbol) [0x00007FF61679E9DC]
+	(No symbol) [0x00007FF6167BAC91]
+	(No symbol) [0x00007FF61684C5FE]
+	(No symbol) [0x00007FF61682C21A]
+	(No symbol) [0x00007FF61684BC80]
+	(No symbol) [0x00007FF61682BFC3]
+	(No symbol) [0x00007FF6167F9617]
+	(No symbol) [0x00007FF6167FA211]
+	GetHandleVerifier [0x00007FF616C994AD+3301629]
+	GetHandleVerifier [0x00007FF616CE36D3+3605283]
+	GetHandleVerifier [0x00007FF616CD9450+3563680]
+	GetHandleVerifier [0x00007FF616A34326+790390]
+	(No symbol) [0x00007FF61690750F]
+	(No symbol) [0x00007FF616903404]
+	(No symbol) [0x00007FF616903592]
+	(No symbol) [0x00007FF6168F2F9F]
+	BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+	RtlUserThreadStart [0x00007FF9BD60AA48+40]
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-01T16:16:31.521126" elapsed="6.432051">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=125.0.6422.113)
+Stacktrace:
+	GetHandleVerifier [0x00007FF616981F52+60322]
+	(No symbol) [0x00007FF6168FCEC9]
+	(No symbol) [0x00007FF6167B7EBA]
+	(No symbol) [0x00007FF6167AFEA2]
+	(No symbol) [0x00007FF6167A09C4]
+	(No symbol) [0x00007FF6167A2212]
+	(No symbol) [0x00007FF6167A0CF1]
+	(No symbol) [0x00007FF6167A04D1]
+	(No symbol) [0x00007FF6167A0410]
+	(No symbol) [0x00007FF61679E39D]
+	(No symbol) [0x00007FF61679E9DC]
+	(No symbol) [0x00007FF6167BAC91]
+	(No symbol) [0x00007FF61684C5FE]
+	(No symbol) [0x00007FF61682C21A]
+	(No symbol) [0x00007FF61684BC80]
+	(No symbol) [0x00007FF61682BFC3]
+	(No symbol) [0x00007FF6167F9617]
+	(No symbol) [0x00007FF6167FA211]
+	GetHandleVerifier [0x00007FF616C994AD+3301629]
+	GetHandleVerifier [0x00007FF616CE36D3+3605283]
+	GetHandleVerifier [0x00007FF616CD9450+3563680]
+	GetHandleVerifier [0x00007FF616A34326+790390]
+	(No symbol) [0x00007FF61690750F]
+	(No symbol) [0x00007FF616903404]
+	(No symbol) [0x00007FF616903592]
+	(No symbol) [0x00007FF6168F2F9F]
+	BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+	RtlUserThreadStart [0x00007FF9BD60AA48+40]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-01T16:16:37.954184" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-06-01T16:16:37.954184" elapsed="0.000000"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T16:16:37.954184" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-01T16:16:31.521126" elapsed="6.433058">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=125.0.6422.113)
+Stacktrace:
+	GetHandleVerifier [0x00007FF616981F52+60322]
+	(No symbol) [0x00007FF6168FCEC9]
+	(No symbol) [0x00007FF6167B7EBA]
+	(No symbol) [0x00007FF6167AFEA2]
+	(No symbol) [0x00007FF6167A09C4]
+	(No symbol) [0x00007FF6167A2212]
+	(No symbol) [0x00007FF6167A0CF1]
+	(No symbol) [0x00007FF6167A04D1]
+	(No symbol) [0x00007FF6167A0410]
+	(No symbol) [0x00007FF61679E39D]
+	(No symbol) [0x00007FF61679E9DC]
+	(No symbol) [0x00007FF6167BAC91]
+	(No symbol) [0x00007FF61684C5FE]
+	(No symbol) [0x00007FF61682C21A]
+	(No symbol) [0x00007FF61684BC80]
+	(No symbol) [0x00007FF61682BFC3]
+	(No symbol) [0x00007FF6167F9617]
+	(No symbol) [0x00007FF6167FA211]
+	GetHandleVerifier [0x00007FF616C994AD+3301629]
+	GetHandleVerifier [0x00007FF616CE36D3+3605283]
+	GetHandleVerifier [0x00007FF616CD9450+3563680]
+	GetHandleVerifier [0x00007FF616A34326+790390]
+	(No symbol) [0x00007FF61690750F]
+	(No symbol) [0x00007FF616903404]
+	(No symbol) [0x00007FF616903592]
+	(No symbol) [0x00007FF6168F2F9F]
+	BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+	RtlUserThreadStart [0x00007FF9BD60AA48+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-06-01T16:16:31.521126" elapsed="6.433058">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=125.0.6422.113)
+Stacktrace:
+	GetHandleVerifier [0x00007FF616981F52+60322]
+	(No symbol) [0x00007FF6168FCEC9]
+	(No symbol) [0x00007FF6167B7EBA]
+	(No symbol) [0x00007FF6167AFEA2]
+	(No symbol) [0x00007FF6167A09C4]
+	(No symbol) [0x00007FF6167A2212]
+	(No symbol) [0x00007FF6167A0CF1]
+	(No symbol) [0x00007FF6167A04D1]
+	(No symbol) [0x00007FF6167A0410]
+	(No symbol) [0x00007FF61679E39D]
+	(No symbol) [0x00007FF61679E9DC]
+	(No symbol) [0x00007FF6167BAC91]
+	(No symbol) [0x00007FF61684C5FE]
+	(No symbol) [0x00007FF61682C21A]
+	(No symbol) [0x00007FF61684BC80]
+	(No symbol) [0x00007FF61682BFC3]
+	(No symbol) [0x00007FF6167F9617]
+	(No symbol) [0x00007FF6167FA211]
+	GetHandleVerifier [0x00007FF616C994AD+3301629]
+	GetHandleVerifier [0x00007FF616CE36D3+3605283]
+	GetHandleVerifier [0x00007FF616CD9450+3563680]
+	GetHandleVerifier [0x00007FF616A34326+790390]
+	(No symbol) [0x00007FF61690750F]
+	(No symbol) [0x00007FF616903404]
+	(No symbol) [0x00007FF616903592]
+	(No symbol) [0x00007FF6168F2F9F]
+	BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+	RtlUserThreadStart [0x00007FF9BD60AA48+40]
+</status>
+</kw>
+<kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;" source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<status status="NOT RUN" start="2024-06-01T16:16:37.955404" elapsed="0.000000"/>
+</kw>
+<kw name="Then welcome page should be open" owner="resource">
+<status status="NOT RUN" start="2024-06-01T16:16:37.956677" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-01T16:16:37.956677" elapsed="2.143684"/>
+</kw>
+<doc>This test case demonstrates a valid login.
+test cases T3 T7</doc>
+<status status="FAIL" start="2024-06-01T16:16:31.519532" elapsed="8.580829">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=125.0.6422.113)
+Stacktrace:
+	GetHandleVerifier [0x00007FF616981F52+60322]
+	(No symbol) [0x00007FF6168FCEC9]
+	(No symbol) [0x00007FF6167B7EBA]
+	(No symbol) [0x00007FF6167AFEA2]
+	(No symbol) [0x00007FF6167A09C4]
+	(No symbol) [0x00007FF6167A2212]
+	(No symbol) [0x00007FF6167A0CF1]
+	(No symbol) [0x00007FF6167A04D1]
+	(No symbol) [0x00007FF6167A0410]
+	(No symbol) [0x00007FF61679E39D]
+	(No symbol) [0x00007FF61679E9DC]
+	(No symbol) [0x00007FF6167BAC91]
+	(No symbol) [0x00007FF61684C5FE]
+	(No symbol) [0x00007FF61682C21A]
+	(No symbol) [0x00007FF61684BC80]
+	(No symbol) [0x00007FF61682BFC3]
+	(No symbol) [0x00007FF6167F9617]
+	(No symbol) [0x00007FF6167FA211]
+	GetHandleVerifier [0x00007FF616C994AD+3301629]
+	GetHandleVerifier [0x00007FF616CE36D3+3605283]
+	GetHandleVerifier [0x00007FF616CD9450+3563680]
+	GetHandleVerifier [0x00007FF616A34326+790390]
+	(No symbol) [0x00007FF61690750F]
+	(No symbol) [0x00007FF616903404]
+	(No symbol) [0x00007FF616903592]
+	(No symbol) [0x00007FF6168F2F9F]
+	BaseThreadInitThunk [0x00007FF9BC4F257D+29]
+	RtlUserThreadStart [0x00007FF9BD60AA48+40]
+</status>
+</test>
+<doc>A test suite with a single Gherkin style test.
 
-                        This test is functionally identical to the example in
-                        valid_login.robot file.
-                    </doc>
-                    <status status="FAIL" start="2024-05-31T09:50:29.033774" elapsed="8.809220"/>
-                </suite>
-                <status status="FAIL" start="2024-05-31T09:50:29.026079" elapsed="8.819454"/>
-            </suite>
-            <status status="FAIL" start="2024-05-31T09:50:29.020805" elapsed="8.826830"/>
-        </suite>
-        <status status="FAIL" start="2024-05-31T09:50:28.992497" elapsed="8.857148"/>
-    </suite>
-    <statistics>
-        <total>
-            <stat pass="0" fail="1" skip="0">All Tests</stat>
-        </total>
-        <tag>
-        </tag>
-        <suite>
-            <stat pass="0" fail="1" skip="0" id="s1" name="Tester">Tester</stat>
-            <stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Case">Tester.Test Case</stat>
-            <stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login Tests">Tester.Test Case.Login Tests</stat>
-            <stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Gherkin Login">Tester.Test Case.Login Tests.Gherkin
-                Login
-            </stat>
-        </suite>
-    </statistics>
-    <errors>
-    </errors>
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="FAIL" start="2024-06-01T16:16:31.271395" elapsed="8.831590"/>
+</suite>
+<status status="FAIL" start="2024-06-01T16:16:31.269373" elapsed="8.836627"/>
+</suite>
+<status status="FAIL" start="2024-06-01T16:16:31.266953" elapsed="8.841047"/>
+</suite>
+<status status="FAIL" start="2024-06-01T16:16:31.240636" elapsed="8.868376"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tester">Tester</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Case">Tester.Test Case</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login Tests">Tester.Test Case.Login Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Gherkin Login">Tester.Test Case.Login Tests.Gherkin Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
 </robot>
